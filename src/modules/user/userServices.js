@@ -1,20 +1,14 @@
-const { pool } = require('../../config/connectionMySQL');
+const userRepository = require('./user-repository');
 
 exports.getAll = async () => {
-    try {
-        const [rows] = await pool.execute('SELECT * FROM usuarios');
-        return rows;
-    }
-    catch (error) {
-        console.error('Erro ao buscar usuários:', error);
-        throw new Error('Erro ao buscar usuários');
-    }
+  return await userRepository.getAll();
 };
 
-exports.create = async ({ nome, email }) => {
-  const [result] = await pool.execute(
-    'INSERT INTO usuarios (nome, email) VALUES (?, ?)',
-    [nome, email]
-  );
-  return { id: result.insertId, nome, email };
+exports.createUser = async (userData) => {
+  // Validação, regra de negócio, etc
+  if (!userData.email.includes('@')) {
+    throw new Error('Email inválido');
+  }
+
+  return await userRepository.create(userData);
 };
