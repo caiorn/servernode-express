@@ -1,0 +1,38 @@
+   [Cliente (Front/Postman/etc)]
+               │
+               ▼
+        ┌────────────────┐
+        │  server.js     │ ← sobe o servidor
+        └────────────────┘
+               │
+               ▼
+        ┌────────────────┐
+        │   app.js       │ ← configura a app (rotas, middlewares)
+        └────────────────┘
+               │
+               ▼
+        ┌────────────────┐
+        │  routes/       │ ← define as rotas, ex: /api/users
+        │  UserRouters   │
+        └────────────────┘
+               │
+               ▼
+        ┌────────────────┐
+        │ controllers/   │ ← lida com req/res, valida dados
+        │ UserController │
+        └────────────────┘
+               │
+               ▼
+        ┌────────────────┐
+        │ services/      │ ← lógica de negócio
+        │ UserService    │
+        └────────────────┘
+               │
+               ▼
+        ┌────────────────┐
+        │ database/      │ ← conexão com MySQL
+        │ index.js       │
+        └────────────────┘
+               │
+               ▼
+        [MySQL Database] ← dados salvos, consultados ou modificados

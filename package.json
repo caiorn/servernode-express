@@ -9,7 +9,7 @@
     "test": "cross-env NODE_ENV=test node server.js",
     "pm2dev": "pm2 start ecosystem.config.js --env development",
     "pm2prod": "pm2 start ecosystem.config.js --env production",
-    "pm2test": "pm2 start ecosystem.config.js --env test" 
+    "pm2test": "pm2 start ecosystem.config.js --env test"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0",
+    "router": "^2.2.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
