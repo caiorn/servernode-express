@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server.js",
-    "prod": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "prod": "cross-env NODE_ENV=production node  src/server.js",
     "test": "cross-env NODE_ENV=test node server.js",
     "pm2dev": "pm2 start ecosystem.config.js --env development",
     "pm2prod": "pm2 start ecosystem.config.js --env production",

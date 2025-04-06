@@ -1,8 +1,8 @@
 # Node.js
 node_modules/
-#.env*
 dist/
 *.log
+#.env* # Uncomment if you want to ignore .env files
 
 # IDEs
 .vscode/
