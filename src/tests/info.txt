@@ -1,0 +1,9 @@
+Download Extensions 
+Install extension for VS Code 
+
+REST Client  
+    for run files in REST-Client 
+
+MySQL (Database Client database-client.com)
+    copy files Query and pasta in Query in database. 
+
