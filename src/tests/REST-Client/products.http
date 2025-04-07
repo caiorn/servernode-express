@@ -1,0 +1,33 @@
+
+### Get all products
+GET http://localhost:3000/api/products
+Content-Type: application/json
+
+#### Get a product by ID
+GET http://localhost:3000/api/products/4
+Content-Type: application/json
+
+### Create a new product
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "nome": "Sample Product",
+    "preco": "50.00",
+    "quantidade":15
+}
+
+### Update a product by ID
+PUT http://localhost:3000/api/products/4
+Content-Type: application/json
+
+{
+    "nome": "Updated Product",
+    "preco": "60.00",
+    "quantidade": 20
+}
+
+### Delete a product by ID
+DELETE http://localhost:3000/api/products/4
+Content-Type: application/json
+

@@ -1,3 +1,6 @@
+// Carrega variáveis de ambiente de acordo com o ambiente (development, production, etc)
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
+
 // Importa a aplicação configurada no app.js
 const app = require('./app');
 const { testarConexao } = require('./config/connectionMySQL'); // importa o teste de conexao

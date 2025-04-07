@@ -1,3 +1,4 @@
+-- Active: 1744035871593@@127.0.0.1@3306
 -- Criação do banco (caso ainda não exista)
 CREATE DATABASE IF NOT EXISTS teste;
 USE teste;

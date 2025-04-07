@@ -1,0 +1,30 @@
+### GET request with body
+GET http://localhost:3000/api/users
+Content-Type: application/json
+
+### GET request with path parameters
+GET http://localhost:3000/api/users/1
+Content-Type: application/json
+
+### POST request
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "nome": "Sample Name",
+    "email": "SampleValue@gmail.com",
+    "senha": "teste"
+}
+
+### PUT request
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+    "nome": "Updated Name",
+    "email": "updated@gmail.com",
+    "senha": "updated"
+}
+
+### DELETE request
+DELETE http://localhost:3000/api/users/2

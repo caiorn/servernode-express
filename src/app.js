@@ -1,11 +1,7 @@
 // Importa os módulos necessários
 const express = require('express');
-const dotenv = require('dotenv');
 const routes = require('./routes');  // importa o index.js da pasta routes
 const logger = require('./utils/logger')(__filename); // importa o logger para logar mensagens no console
-
-// Carrega variáveis de ambiente de acordo com o ambiente (development, production, etc)
-dotenv.config({ path: `.env.${process.env.NODE_ENV || 'development'}` });
 
 // Cria a instância do Express (essa será a "app" da aplicação)
 const app = express();
@@ -28,18 +24,10 @@ app.use(express.json());
 
 // Define a rota principal da API (prefixo /api) para os endpoints de usuário
 app.use('/api', routes);
-logger.debug('🟢 Rotas registradas');
-logger.debug('📋 Todas as rotas encontradas:', routes);
 // Rota de teste para ver as variáveis de ambiente carregadas
 
 // Rota para listar rotas em desenvolvimento
 if (process.env.NODE_ENV !== 'production') {
-  app._router.stack?.forEach(function(r){
-    if (r.route && r.route.path){
-      console.log(r.route.path)
-    }
-  })
-
   app.get('/', (req, res) => {
     res.json(envVars);     
   });

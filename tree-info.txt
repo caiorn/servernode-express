@@ -1,0 +1,41 @@
+            [Cliente (Front/Postman/etc)]         ← envia requisições HTTP
+                        │
+                        ▼
+              ┌────────────────────┐
+              │     server.js      │         ← inicia o servidor Express
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │      app.js        │         ← configura middlewares e rotas
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │     routes/        │         ← define os endpoints da API
+              │     index.js       │
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │   controllers/     │         ← lida com req/res, chama o service
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │     services/      │         ← regras de negócio e validações
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │   repositories/    │         ← abstração de acesso ao banco
+              └────────────────────┘
+                        │
+                        ▼
+              ┌────────────────────┐
+              │     database/      │         ← conexão e config do banco
+              │     index.js       │
+              └────────────────────┘
+                        │
+                        ▼
+                 [MySQL Database]            ← armazena os dados da aplicação
